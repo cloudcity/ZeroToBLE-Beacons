@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lNa-2w-DNS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Baggage-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaggageViewController" customModule="Baggage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Conveyor" translatesAutoresizingMaskIntoConstraints="NO" id="khz-gK-36v"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immediate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-gO-Qsq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Clp-zd-zU2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suitcase" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-ux-jrh">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="nsg-jj-FFJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="vh8-Go-Tdc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="khz-gK-36v" secondAttribute="trailing" constant="8" id="FU0-jd-RVJ"/>
+                            <constraint firstItem="gpa-gO-Qsq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HDU-wh-P2I"/>
+                            <constraint firstItem="gpa-gO-Qsq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Lwd-MN-tsT"/>
+                            <constraint firstItem="gpa-gO-Qsq" firstAttribute="top" secondItem="khz-gK-36v" secondAttribute="bottom" constant="8" id="Ou4-Kf-dHv"/>
+                            <constraint firstItem="khz-gK-36v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="PVm-NH-RpE"/>
+                            <constraint firstItem="IzO-ux-jrh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJv-Pc-bXp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gpa-gO-Qsq" secondAttribute="bottom" constant="16" id="cMk-Ia-trp"/>
+                            <constraint firstItem="IzO-ux-jrh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iuM-V2-zrJ"/>
+                            <constraint firstItem="khz-gK-36v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="u0i-wg-9Va"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Baggage" id="xgl-6G-077"/>
+                    <connections>
+                        <outlet property="proximityLabel" destination="gpa-gO-Qsq" id="Hay-XM-Xqs"/>
+                        <outlet property="suitcaseHeightConstraint" destination="vh8-Go-Tdc" id="a7z-xh-GUH"/>
+                        <outlet property="suitcaseImage" destination="IzO-ux-jrh" id="Eee-rU-ugw"/>
+                        <outlet property="suitcaseTopConstraint" destination="iuM-V2-zrJ" id="wjm-Zx-YiW"/>
+                        <outlet property="suitcaseWidthConstraint" destination="nsg-jj-FFJ" id="U7Z-UT-As6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.8" y="357.57121439280365"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J7k-mI-P07">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNa-2w-DNS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F21-F1-7jb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f7C-Kw-lLd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTE-7y-hG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453.60000000000002" y="357.57121439280365"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Conveyor" width="375" height="490"/>
+        <image name="suitcase" width="320" height="281"/>
+    </resources>
+</document>
